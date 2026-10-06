@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Back-office YBCoaching</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body class="admin">
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="/admin/" class="logo" aria-label="Back-office YBCoaching">
+        <img class="logo__mark" src="/assets/favicon.svg" width="42" height="42" alt="">
+        <span class="logo__text">
+          <span class="logo__name"><strong>BERKOUK</strong> Younouss</span>
+          <span class="logo__brand">YB<em>Coaching</em> · Back-office</span>
+        </span>
+      </a>
+      <button class="btn btn--small btn--ghost" id="logout" hidden>Se déconnecter</button>
+    </div>
+  </header>
+
+  <!-- Connexion -->
+  <main class="container" id="login-view">
+    <form class="login" id="login-form">
+      <h1>Connexion</h1>
+      <p class="muted">Accès réservé à l'administrateur.</p>
+      <label>Utilisateur<input name="user" required autocomplete="username" autofocus></label>
+      <label>Mot de passe<input name="password" type="password" required autocomplete="current-password"></label>
+      <button class="btn" type="submit">Se connecter</button>
+      <p class="login__error" role="alert" hidden></p>
+    </form>
+  </main>
+
+  <!-- Liste des contacts -->
+  <main class="container" id="contacts-view" hidden>
+    <div class="admin__head">
+      <div>
+        <p class="eyebrow">Back-office</p>
+        <h1>Demandes de contact</h1>
+      </div>
+      <div class="admin__stats">
+        <div><strong id="stat-total">0</strong><span>au total</span></div>
+        <div><strong id="stat-unread">0</strong><span>non lues</span></div>
+        <div><strong id="stat-week">0</strong><span>ces 7 jours</span></div>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <input type="search" id="search" placeholder="Rechercher un nom, un e-mail, un message…" aria-label="Rechercher">
+      <label class="toolbar__check"><input type="checkbox" id="only-unread"> Non lues uniquement</label>
+      <button class="btn btn--small btn--ghost" id="refresh">Actualiser</button>
+      <button class="btn btn--small" id="export">Exporter CSV</button>
+    </div>
+
+    <p class="notice" id="storage-notice" hidden>
+      Stockage temporaire actif : les contacts ne sont pas conservés durablement.
+      Connectez une base Upstash Redis au projet Vercel (voir le README).
+    </p>
+
+    <div class="table-wrap">
+      <table class="contacts">
+        <thead>
+          <tr><th>Date</th><th>Nom</th><th>E-mail</th><th>Message</th><th><span class="sr-only">Actions</span></th></tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <p class="empty" id="empty" hidden>Aucune demande pour le moment.</p>
+    </div>
+  </main>
+
+  <script src="/admin/admin.js"></script>
+</body>
+</html>

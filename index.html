@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YBCoaching — Younouss BERKOUK, Coach Agile</title>
+  <meta name="description" content="Younouss BERKOUK (YBCoaching), coach agile certifié : accompagnement Scrum, Kanban, SAFe et transformation agile pour des équipes plus autonomes, plus rapides et plus sereines.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a href="#top" class="logo" aria-label="BERKOUK Younouss — YBCoaching, accueil">
+        <svg class="logo__mark" viewBox="0 0 48 48" width="42" height="42" aria-hidden="true">
+          <defs>
+            <linearGradient id="yb-grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="var(--primary)"/>
+              <stop offset="1" stop-color="var(--teal)"/>
+            </linearGradient>
+          </defs>
+          <rect width="48" height="48" rx="13" fill="url(#yb-grad)"/>
+          <path d="M9 13l6 9 6-9M15 22v13" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M26 13v22h7a5.5 5.5 0 0 0 0-11h-7h6a5.5 5.5 0 0 0 0-11z" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M33 7l6 0 0 6" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo__text">
+          <span class="logo__name"><strong>BERKOUK</strong> Younouss</span>
+          <span class="logo__brand">YB<em>Coaching</em></span>
+        </span>
+      </a>
+      <input type="checkbox" id="menu-toggle" class="nav__toggle" aria-label="Ouvrir le menu">
+      <label for="menu-toggle" class="nav__burger" aria-hidden="true"><span></span></label>
+      <nav class="nav__links">
+        <a href="#services">Services</a>
+        <a href="#approche">Approche</a>
+        <a href="#resultats">Résultats</a>
+        <a href="#temoignages">Témoignages</a>
+        <a href="#contact" class="btn btn--small">Prendre contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <p class="eyebrow">Younouss BERKOUK · Coach Agile &amp; Facilitateur</p>
+        <h1>Des équipes qui livrent <span class="highlight">mieux</span>, plus vite, et avec le sourire.</h1>
+        <p class="lead">J'accompagne les équipes et les dirigeants dans leur transformation agile : Scrum, Kanban, SAFe, management 3.0. Du concret, du terrain, des résultats mesurables.</p>
+        <div class="hero__cta">
+          <a href="#contact" class="btn">Réserver un appel découverte</a>
+          <a href="#resultats" class="btn btn--ghost">Voir les résultats →</a>
+        </div>
+        <ul class="badges">
+          <li>PSM II</li><li>ICP-ACC</li><li>SAFe SPC</li><li>Kanban KMP</li>
+        </ul>
+      </div>
+
+      <!-- Illustration : boucle d'itération / sprint -->
+      <div class="hero__visual" aria-hidden="true">
+        <svg viewBox="0 0 420 420" class="sprint-loop">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="var(--primary)"/>
+              <stop offset="1" stop-color="var(--accent)"/>
+            </linearGradient>
+          </defs>
+          <circle cx="210" cy="210" r="190" fill="var(--surface-2)"/>
+          <circle cx="210" cy="210" r="140" fill="none" stroke="url(#g1)" stroke-width="18" stroke-linecap="round" stroke-dasharray="760 120" class="spin"/>
+          <g class="steps">
+            <g transform="translate(210 70)"><circle r="34" fill="var(--surface)"/><text y="-2">Plan</text><text y="14" class="small">Sprint</text></g>
+            <g transform="translate(350 210)"><circle r="34" fill="var(--surface)"/><text y="-2">Build</text><text y="14" class="small">Daily</text></g>
+            <g transform="translate(210 350)"><circle r="34" fill="var(--surface)"/><text y="-2">Review</text><text y="14" class="small">Démo</text></g>
+            <g transform="translate(70 210)"><circle r="34" fill="var(--surface)"/><text y="-2">Rétro</text><text y="14" class="small">Améliorer</text></g>
+          </g>
+          <g transform="translate(210 210)">
+            <circle r="62" fill="url(#g1)"/>
+            <text y="-4" class="center">Valeur</text>
+            <text y="18" class="center center--small">livrée</text>
+          </g>
+        </svg>
+        <div class="float-card float-card--a">
+          <strong>+42 %</strong><span>de prévisibilité</span>
+        </div>
+        <div class="float-card float-card--b">
+          <strong>2 sem.</strong><span>par itération</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logos / chiffres -->
+  <section class="stats">
+    <div class="container stats__grid">
+      <div><strong>12 ans</strong><span>d'expérience terrain</span></div>
+      <div><strong>60+</strong><span>équipes accompagnées</span></div>
+      <div><strong>25</strong><span>organisations transformées</span></div>
+      <div><strong>4,9/5</strong><span>satisfaction moyenne</span></div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <p class="eyebrow">Services</p>
+      <h2>Un accompagnement adapté à votre maturité</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v4h4" /></svg>
+          </div>
+          <h3>Coaching d'équipe</h3>
+          <p>Mise en place de Scrum ou Kanban, facilitation des cérémonies, montée en autonomie des équipes de développement.</p>
+          <ul><li>Diagnostic de maturité</li><li>Coaching Scrum Master &amp; PO</li><li>Ateliers sur mesure</li></ul>
+        </article>
+        <article class="card card--featured">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6" /></svg>
+          </div>
+          <h3>Transformation d'organisation</h3>
+          <p>Passage à l'échelle avec SAFe, LeSS ou un modèle hybride. Alignement stratégie ↔ exécution, portefeuille agile.</p>
+          <ul><li>Feuille de route de transformation</li><li>Lancement d'Agile Release Train</li><li>OKR &amp; gouvernance légère</li></ul>
+        </article>
+        <article class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6" /></svg>
+          </div>
+          <h3>Coaching de managers</h3>
+          <p>Leadership serviteur, Management 3.0, posture de coach : aider les managers à créer un cadre où les équipes s'épanouissent.</p>
+          <ul><li>Coaching individuel</li><li>Formations certifiantes</li><li>Communautés de pratique</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approche -->
+  <section class="section section--alt" id="approche">
+    <div class="container">
+      <p class="eyebrow">Approche</p>
+      <h2>Une démarche itérative, comme vos projets</h2>
+      <ol class="timeline">
+        <li><span class="timeline__num">01</span><h3>Observer</h3><p>Immersion dans vos équipes, entretiens, cartographie de la chaîne de valeur.</p></li>
+        <li><span class="timeline__num">02</span><h3>Co-construire</h3><p>Définition d'objectifs mesurables et d'un plan d'action avec vos équipes.</p></li>
+        <li><span class="timeline__num">03</span><h3>Expérimenter</h3><p>Petits pas, feedback rapide : on teste, on mesure, on ajuste à chaque sprint.</p></li>
+        <li><span class="timeline__num">04</span><h3>Pérenniser</h3><p>Transfert de compétences pour que l'agilité vive sans moi.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Résultats : graphique -->
+  <section class="section" id="resultats">
+    <div class="container results">
+      <div class="results__text">
+        <p class="eyebrow">Résultats</p>
+        <h2>Des progrès visibles, sprint après sprint</h2>
+        <p>Moyenne observée sur les équipes accompagnées en 2025 : la vélocité se stabilise et augmente, tandis que le délai de livraison (lead time) est divisé par plus de deux en six mois.</p>
+        <ul class="kpis">
+          <li><strong>×1,8</strong><span>vélocité moyenne</span></li>
+          <li><strong>−58 %</strong><span>lead time</span></li>
+          <li><strong>−70 %</strong><span>bugs en production</span></li>
+        </ul>
+      </div>
+
+      <figure class="chart" role="img" aria-labelledby="chart-title chart-desc">
+        <figcaption>
+          <span id="chart-title" class="chart__title">Vélocité et lead time sur 12 sprints</span>
+          <span class="legend">
+            <span class="legend__item"><i class="swatch swatch--bar"></i>Vélocité (points)</span>
+            <span class="legend__item"><i class="swatch swatch--line"></i>Lead time (jours)</span>
+          </span>
+        </figcaption>
+        <p id="chart-desc" class="sr-only">La vélocité passe de 18 à 33 points entre le sprint 1 et le sprint 12, tandis que le lead time baisse de 19 à 8 jours.</p>
+        <div class="chart__canvas" id="chart"></div>
+        <div class="chart__tooltip" id="tooltip" hidden></div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Témoignages -->
+  <section class="section section--alt" id="temoignages">
+    <div class="container">
+      <p class="eyebrow">Témoignages</p>
+      <h2>Ils en parlent mieux que moi</h2>
+      <div class="quotes">
+        <blockquote>
+          <p>« En trois mois, nos sprints sont devenus prévisibles et nos démos attendues par le métier. Un vrai changement de culture. »</p>
+          <footer><span class="avatar">CL</span><div><strong>Claire L.</strong><span>Directrice produit, scale-up SaaS</span></div></footer>
+        </blockquote>
+        <blockquote>
+          <p>« Pragmatique, à l'écoute, jamais dogmatique. Le lancement de notre premier train SAFe s'est fait sans douleur. »</p>
+          <footer><span class="avatar">MB</span><div><strong>Marc B.</strong><span>DSI, groupe bancaire</span></div></footer>
+        </blockquote>
+        <blockquote>
+          <p>« Mes managers ont changé de posture : moins de contrôle, plus de soutien. Les équipes respirent. »</p>
+          <footer><span class="avatar">SN</span><div><strong>Sofia N.</strong><span>DRH, industrie</span></div></footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="cta">
+        <div>
+          <h2>Prêt à lancer votre prochain sprint ?</h2>
+          <p>30 minutes offertes pour faire le point sur votre contexte et identifier les premiers leviers d'amélioration.</p>
+        </div>
+        <form class="form" id="contact-form" novalidate>
+          <label>Nom<input type="text" name="nom" required maxlength="120" autocomplete="name"></label>
+          <label>E-mail<input type="email" name="email" required maxlength="200" autocomplete="email"></label>
+          <label class="form__full">Votre besoin<textarea name="message" rows="3" maxlength="5000" placeholder="Équipe, contexte, objectifs…"></textarea></label>
+          <input type="text" name="website" class="form__hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn--light form__full" type="submit">Envoyer la demande</button>
+          <p class="form__status form__full" role="status" hidden></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 YBCoaching — Younouss BERKOUK, coaching agile</span>
+      <span><a href="#services">Services</a> · <a href="#contact">Contact</a> · <a href="#">Mentions légales</a></span>
+    </div>
+  </footer>
+
+  <script src="chart.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 56" font-family="Space Grotesk, Inter, Arial, sans-serif">
+  <defs>
+    <linearGradient id="yb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#0d9488"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(4 4)">
+    <rect width="48" height="48" rx="13" fill="url(#yb)"/>
+    <path d="M9 13l6 9 6-9M15 22v13" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M26 13v22h7a5.5 5.5 0 0 0 0-11h-7h6a5.5 5.5 0 0 0 0-11z" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M33 7l6 0 0 6" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="66" y="27" font-size="20" fill="#1e1b2e"><tspan font-weight="700">BERKOUK</tspan> <tspan font-weight="500">Younouss</tspan></text>
+  <text x="66" y="47" font-size="14" font-weight="700" letter-spacing="2.5" fill="#4f46e5">YB<tspan fill="#0d9488">COACHING</tspan></text>
+</svg>
