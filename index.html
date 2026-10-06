@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Coach Agile — Accompagnement des équipes et des organisations</title>
-  <meta name="description" content="Coach Agile certifié : accompagnement Scrum, Kanban, SAFe et transformation agile pour des équipes plus autonomes, plus rapides et plus sereines.">
+  <title>YBCoaching — Younouss BERKOUK, Coach Agile</title>
+  <meta name="description" content="Younouss BERKOUK (YBCoaching), coach agile certifié : accompagnement Scrum, Kanban, SAFe et transformation agile pour des équipes plus autonomes, plus rapides et plus sereines.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,13 +16,23 @@
   <!-- Navigation -->
   <header class="nav" id="top">
     <div class="container nav__inner">
-      <a href="#top" class="logo">
-        <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
-          <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="66 22" stroke-linecap="round"/>
-          <path d="M22 6l3 4-4.6 1.4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="16" cy="16" r="4" fill="var(--accent)"/>
+      <a href="#top" class="logo" aria-label="BERKOUK Younouss — YBCoaching, accueil">
+        <svg class="logo__mark" viewBox="0 0 48 48" width="42" height="42" aria-hidden="true">
+          <defs>
+            <linearGradient id="yb-grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="var(--primary)"/>
+              <stop offset="1" stop-color="var(--teal)"/>
+            </linearGradient>
+          </defs>
+          <rect width="48" height="48" rx="13" fill="url(#yb-grad)"/>
+          <path d="M9 13l6 9 6-9M15 22v13" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M26 13v22h7a5.5 5.5 0 0 0 0-11h-7h6a5.5 5.5 0 0 0 0-11z" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M33 7l6 0 0 6" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <span>Iter<strong>Agile</strong></span>
+        <span class="logo__text">
+          <span class="logo__name"><strong>BERKOUK</strong> Younouss</span>
+          <span class="logo__brand">YB<em>Coaching</em></span>
+        </span>
       </a>
       <input type="checkbox" id="menu-toggle" class="nav__toggle" aria-label="Ouvrir le menu">
       <label for="menu-toggle" class="nav__burger" aria-hidden="true"><span></span></label>
@@ -39,7 +50,7 @@
   <section class="hero">
     <div class="container hero__grid">
       <div class="hero__text">
-        <p class="eyebrow">Coach Agile &amp; Facilitateur</p>
+        <p class="eyebrow">Younouss BERKOUK · Coach Agile &amp; Facilitateur</p>
         <h1>Des équipes qui livrent <span class="highlight">mieux</span>, plus vite, et avec le sourire.</h1>
         <p class="lead">J'accompagne les équipes et les dirigeants dans leur transformation agile : Scrum, Kanban, SAFe, management 3.0. Du concret, du terrain, des résultats mesurables.</p>
         <div class="hero__cta">
@@ -201,12 +212,13 @@
           <h2>Prêt à lancer votre prochain sprint ?</h2>
           <p>30 minutes offertes pour faire le point sur votre contexte et identifier les premiers leviers d'amélioration.</p>
         </div>
-        <form class="form" onsubmit="event.preventDefault(); this.querySelector('.form__ok').hidden = false; this.reset();">
-          <label>Nom<input type="text" name="nom" required autocomplete="name"></label>
-          <label>E-mail<input type="email" name="email" required autocomplete="email"></label>
-          <label class="form__full">Votre besoin<textarea name="message" rows="3" placeholder="Équipe, contexte, objectifs…"></textarea></label>
+        <form class="form" id="contact-form" novalidate>
+          <label>Nom<input type="text" name="nom" required maxlength="120" autocomplete="name"></label>
+          <label>E-mail<input type="email" name="email" required maxlength="200" autocomplete="email"></label>
+          <label class="form__full">Votre besoin<textarea name="message" rows="3" maxlength="5000" placeholder="Équipe, contexte, objectifs…"></textarea></label>
+          <input type="text" name="website" class="form__hp" tabindex="-1" autocomplete="off" aria-hidden="true">
           <button class="btn btn--light form__full" type="submit">Envoyer la demande</button>
-          <p class="form__ok form__full" hidden>Merci ! Je vous recontacte sous 48 h.</p>
+          <p class="form__status form__full" role="status" hidden></p>
         </form>
       </div>
     </div>
@@ -214,11 +226,12 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <span>© 2026 IterAgile — Coaching agile</span>
+      <span>© 2026 YBCoaching — Younouss BERKOUK, coaching agile</span>
       <span><a href="#services">Services</a> · <a href="#contact">Contact</a> · <a href="#">Mentions légales</a></span>
     </div>
   </footer>
 
   <script src="chart.js"></script>
+  <script src="contact.js"></script>
 </body>
 </html>
