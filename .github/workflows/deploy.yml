@@ -11,8 +11,9 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  # Identifiants publics de l'équipe et du projet Vercel (pas des secrets).
+  VERCEL_ORG_ID: team_o738YikXsBRKVERqQuCJnq1a
+  VERCEL_PROJECT_ID: prj_g0yx4Kbsqk4fE8EcaAde1ik738dD
   HAS_TOKEN: ${{ secrets.VERCEL_TOKEN != '' }}
 
 jobs:
